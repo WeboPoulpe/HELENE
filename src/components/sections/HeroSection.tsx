@@ -22,23 +22,28 @@ export function HeroSection() {
 
       {/* Floating petals */}
       {[
-        { left: '8%',  top: '70%', delay: 0,   dur: 8,  size: 'w-1.5 h-3' },
-        { left: '18%', top: '80%', delay: 2.5, dur: 10, size: 'w-2 h-4' },
-        { left: '32%', top: '65%', delay: 1,   dur: 9,  size: 'w-1 h-2.5' },
-        { left: '55%', top: '75%', delay: 3,   dur: 7,  size: 'w-1.5 h-3' },
-        { left: '70%', top: '85%', delay: 0.5, dur: 11, size: 'w-2 h-4' },
-        { left: '82%', top: '60%', delay: 1.8, dur: 8,  size: 'w-1 h-2.5' },
-        { left: '91%', top: '78%', delay: 4,   dur: 9,  size: 'w-1.5 h-3' },
-        { left: '45%', top: '90%', delay: 2,   dur: 10, size: 'w-2 h-4' },
+        { left: '6%',  top: '55%', delay: 0,   dur: 9,  w: 10, h: 22 },
+        { left: '14%', top: '30%', delay: 2.5, dur: 11, w: 14, h: 30 },
+        { left: '22%', top: '70%', delay: 1,   dur: 8,  w: 8,  h: 18 },
+        { left: '35%', top: '20%', delay: 3.5, dur: 10, w: 12, h: 26 },
+        { left: '48%', top: '60%', delay: 1.5, dur: 9,  w: 10, h: 22 },
+        { left: '57%', top: '15%', delay: 0.8, dur: 12, w: 14, h: 30 },
+        { left: '66%', top: '75%', delay: 3,   dur: 8,  w: 8,  h: 18 },
+        { left: '75%', top: '40%', delay: 2,   dur: 10, w: 12, h: 26 },
+        { left: '85%', top: '65%', delay: 4,   dur: 9,  w: 10, h: 22 },
+        { left: '93%', top: '25%', delay: 1.2, dur: 11, w: 14, h: 30 },
+        { left: '28%', top: '85%', delay: 0.4, dur: 8,  w: 8,  h: 18 },
+        { left: '72%', top: '10%', delay: 2.8, dur: 10, w: 12, h: 26 },
       ].map((p, i) => (
         <motion.div
           key={i}
-          className={`pointer-events-none absolute ${p.size} rounded-full bg-rose/25`}
-          style={{ left: p.left, top: p.top, rotate: 30 }}
+          className="pointer-events-none absolute rounded-full bg-rose"
+          style={{ left: p.left, top: p.top, width: p.w, height: p.h, rotate: 25 + i * 15 }}
           animate={{
-            y: [0, -120, -240],
-            rotate: [30, 90, 150],
-            opacity: [0, 0.6, 0],
+            y: [0, -80, -180],
+            rotate: [25 + i * 15, 80 + i * 10, 140 + i * 8],
+            opacity: [0, 0.55, 0],
+            x: [0, i % 2 === 0 ? 20 : -20, i % 2 === 0 ? -10 : 10],
           }}
           transition={{
             duration: p.dur,
