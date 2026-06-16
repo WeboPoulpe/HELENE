@@ -21,13 +21,14 @@ const objectives = [
 export default function BoiteAOutilsPage() {
   return (
     <>
-      <section className="bg-off-white pt-32 pb-16 lg:pt-44 lg:pb-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <section className="bg-navy relative overflow-hidden pt-32 pb-16 lg:pt-44 lg:pb-20">
+        <div className="pointer-events-none absolute -top-32 right-0 w-96 h-96 rounded-full bg-rose/10 blur-3xl opacity-60" aria-hidden="true" />
+        <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <Badge className="mb-6">Ressources</Badge>
-          <h1 className="font-display text-4xl leading-tight text-navy lg:text-5xl max-w-3xl">
+          <h1 className="font-display text-4xl leading-tight text-white lg:text-5xl max-w-3xl">
             Boîte à outils
           </h1>
-          <p className="mt-6 max-w-2xl text-base text-slate lg:text-lg">
+          <p className="mt-6 max-w-2xl text-base text-white/60 lg:text-lg">
             Un espace dédié aux outils de gestion d&apos;entreprise, pensé
             pour accompagner les entrepreneurs qui veulent avancer vite
             et bien — sans se noyer dans la complexité.

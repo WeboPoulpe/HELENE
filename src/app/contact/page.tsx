@@ -11,15 +11,16 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-off-white pt-32 pb-16 lg:pt-44 lg:pb-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h1 className="font-display text-4xl leading-tight text-navy lg:text-5xl">
+      <section className="bg-navy relative overflow-hidden pt-32 pb-16 lg:pt-44 lg:pb-20">
+        <div className="pointer-events-none absolute -top-32 right-0 w-96 h-96 rounded-full bg-rose/10 blur-3xl opacity-60" aria-hidden="true" />
+        <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h1 className="font-display text-4xl leading-tight text-white lg:text-5xl">
             Prenons contact
           </h1>
           <p className="mt-4 text-xl font-medium text-rose">
             Votre organisation ne va pas s&apos;optimiser toute seule.
           </p>
-          <p className="mt-4 max-w-2xl text-base text-slate lg:text-lg">
+          <p className="mt-4 max-w-2xl text-base text-white/60 lg:text-lg">
             Que vous ayez une question précise ou une envie de changement,
             je suis là pour vous écouter. Premier échange offert, sans
             engagement.

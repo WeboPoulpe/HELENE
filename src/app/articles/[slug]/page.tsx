@@ -41,17 +41,18 @@ export default async function ArticlePage({ params }: Props) {
 
   return (
     <article className="bg-white">
-      <header className="bg-off-white pt-32 pb-12 lg:pt-44 lg:pb-16">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <nav aria-label="Fil d'Ariane" className="mb-6 text-sm text-slate">
+      <header className="bg-navy relative overflow-hidden pt-32 pb-12 lg:pt-44 lg:pb-16">
+        <div className="pointer-events-none absolute -top-32 right-0 w-96 h-96 rounded-full bg-rose/10 blur-3xl opacity-60" aria-hidden="true" />
+        <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <nav aria-label="Fil d'Ariane" className="mb-6 text-sm text-white/60">
             <Link href="/" className="hover:text-rose transition-colors">Accueil</Link>
             <span className="mx-2">·</span>
             <Link href="/articles" className="hover:text-rose transition-colors">Articles</Link>
             <span className="mx-2">·</span>
-            <span className="text-navy">{article.title}</span>
+            <span className="text-white">{article.title}</span>
           </nav>
-          <p className="text-sm text-slate mb-3">{formatDate(article.date)}</p>
-          <h1 className="font-display text-3xl leading-tight text-navy lg:text-4xl">
+          <p className="text-sm text-white/60 mb-3">{formatDate(article.date)}</p>
+          <h1 className="font-display text-3xl leading-tight text-white lg:text-4xl">
             {article.title}
           </h1>
         </div>

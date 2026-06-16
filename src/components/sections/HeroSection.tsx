@@ -6,8 +6,20 @@ import { Button } from '@/components/ui/Button'
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center bg-navy pt-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <section className="relative flex min-h-screen items-center bg-navy pt-24 overflow-hidden">
+      {/* Animated background glows */}
+      <motion.div
+        className="pointer-events-none absolute top-1/3 -right-32 w-[500px] h-[500px] rounded-full bg-rose/10 blur-3xl"
+        animate={{ scale: [1, 1.25, 1], opacity: [0.35, 0.6, 0.35] }}
+        transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute -bottom-32 left-1/4 w-96 h-96 rounded-full bg-navy-light blur-3xl opacity-60"
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <motion.div
             initial={{ opacity: 0 }}
@@ -24,8 +36,7 @@ export function HeroSection() {
                 initial={{ y: '100%' }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                className="font-display font-extrabold text-white leading-none"
-                style={{ fontSize: 'clamp(3.5rem, 8vw, 6.5rem)' }}
+                className="font-display font-extrabold text-white leading-none text-4xl md:text-5xl xl:text-6xl"
               >
                 Conseil en{' '}
                 <span className="text-rose">gestion</span>
@@ -48,7 +59,7 @@ export function HeroSection() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: 0.55 }}
-              className="flex flex-col gap-3 sm:flex-row"
+              className="flex flex-col gap-3 sm:flex-row mt-2"
             >
               <Link href="/contact">
                 <Button variant="primary">Me rencontrer</Button>

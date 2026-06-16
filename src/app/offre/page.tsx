@@ -16,13 +16,14 @@ export const metadata: Metadata = {
 export default function OffrePage() {
   return (
     <>
-      <section className="bg-off-white pt-32 pb-16 lg:pt-44 lg:pb-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <section className="bg-navy relative overflow-hidden pt-32 pb-16 lg:pt-44 lg:pb-20">
+        <div className="pointer-events-none absolute -top-32 right-0 w-96 h-96 rounded-full bg-rose/10 blur-3xl opacity-60" aria-hidden="true" />
+        <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <Badge className="mb-6">Services</Badge>
-          <h1 className="font-display text-4xl leading-tight text-navy lg:text-5xl max-w-3xl">
+          <h1 className="font-display text-4xl leading-tight text-white lg:text-5xl max-w-3xl">
             Ce que je fais pour vous (et surtout ce que ça change pour vous)
           </h1>
-          <p className="mt-6 max-w-2xl text-base text-slate lg:text-lg">
+          <p className="mt-6 max-w-2xl text-base text-white/60 lg:text-lg">
             Chaque service est conçu pour vous libérer du temps, vous donner
             de la visibilité et vous permettre de piloter votre activité avec
             sérénité.
