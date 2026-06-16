@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { fraunces, dmSans } from '@/lib/fonts'
+import { bricolageGrotesk, dmSans, fraunces } from '@/lib/fonts'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import './globals.css'
@@ -43,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" className={`${fraunces.variable} ${dmSans.variable}`}>
+    <html lang="fr" className={`${bricolageGrotesk.variable} ${dmSans.variable} ${fraunces.variable}`}>
       <head>
         <script
           type="application/ld+json"

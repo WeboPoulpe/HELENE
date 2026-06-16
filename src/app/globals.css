@@ -8,14 +8,14 @@
   }
 
   body {
-    @apply bg-cream text-ink font-sans antialiased;
+    @apply bg-white text-navy font-sans antialiased;
   }
 
   h1, h2, h3 {
-    @apply font-serif;
+    @apply font-display;
   }
 
   *:focus-visible {
-    @apply ring-2 ring-terracotta ring-offset-2 outline-none;
+    @apply ring-2 ring-rose ring-offset-2 outline-none;
   }
 }

@@ -9,16 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: '#F7F4EF',
-        ink: '#1C1A17',
-        terracotta: '#C97B5A',
-        'terracotta-light': '#E8C4A8',
-        stone: '#E8E4DE',
-        muted: '#7A746E',
+        navy:         '#12163A',
+        'navy-light': '#1E2448',
+        rose:         '#E8447A',
+        'rose-pale':  '#FDE8EF',
+        'off-white':  '#F8F7F4',
+        white:        '#FFFFFF',
+        slate:        '#64748B',
       },
       fontFamily: {
-        serif: ['var(--font-fraunces)', 'Georgia', 'serif'],
-        sans: ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-bricolage)', 'system-ui', 'sans-serif'],
+        sans:    ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
+        serif:   ['var(--font-fraunces)', 'Georgia', 'serif'],
       },
     },
   },
