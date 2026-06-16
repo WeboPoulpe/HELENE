@@ -19,6 +19,36 @@ export function HeroSection() {
         aria-hidden="true"
       />
 
+      {/* Floating petals */}
+      {[
+        { left: '8%',  top: '70%', delay: 0,   dur: 8,  size: 'w-1.5 h-3' },
+        { left: '18%', top: '80%', delay: 2.5, dur: 10, size: 'w-2 h-4' },
+        { left: '32%', top: '65%', delay: 1,   dur: 9,  size: 'w-1 h-2.5' },
+        { left: '55%', top: '75%', delay: 3,   dur: 7,  size: 'w-1.5 h-3' },
+        { left: '70%', top: '85%', delay: 0.5, dur: 11, size: 'w-2 h-4' },
+        { left: '82%', top: '60%', delay: 1.8, dur: 8,  size: 'w-1 h-2.5' },
+        { left: '91%', top: '78%', delay: 4,   dur: 9,  size: 'w-1.5 h-3' },
+        { left: '45%', top: '90%', delay: 2,   dur: 10, size: 'w-2 h-4' },
+      ].map((p, i) => (
+        <motion.div
+          key={i}
+          className={`pointer-events-none absolute ${p.size} rounded-full bg-rose/25`}
+          style={{ left: p.left, top: p.top, rotate: 30 }}
+          animate={{
+            y: [0, -120, -240],
+            rotate: [30, 90, 150],
+            opacity: [0, 0.6, 0],
+          }}
+          transition={{
+            duration: p.dur,
+            repeat: Infinity,
+            delay: p.delay,
+            ease: 'easeInOut',
+          }}
+          aria-hidden="true"
+        />
+      ))}
+
       <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <motion.div

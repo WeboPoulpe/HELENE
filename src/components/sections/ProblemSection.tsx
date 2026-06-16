@@ -6,7 +6,8 @@ export function ProblemSection() {
   return (
     <section className="bg-off-white py-20 lg:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          {/* Left: existing text content */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -52,6 +53,20 @@ export function ProblemSection() {
               Je structure votre activité pour plus de clarté, de temps et de
               rentabilité.
             </p>
+          </motion.div>
+
+          {/* Right: photo placeholder */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.15 }}
+            className="hidden lg:flex justify-end"
+          >
+            <div className="relative aspect-[3/4] w-full max-w-sm bg-navy/5 border border-navy/10 flex flex-col items-center justify-center gap-3 overflow-hidden">
+              <span className="font-display text-8xl font-extrabold text-navy/8 select-none" aria-hidden="true">HF</span>
+              <span className="text-[10px] uppercase tracking-widest text-navy/30">Photo à venir</span>
+            </div>
           </motion.div>
         </div>
       </div>

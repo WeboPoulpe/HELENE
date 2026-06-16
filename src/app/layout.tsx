@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { bricolageGrotesk, dmSans, fraunces } from '@/lib/fonts'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { CookieBanner } from '@/components/CookieBanner'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -54,6 +55,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   )
