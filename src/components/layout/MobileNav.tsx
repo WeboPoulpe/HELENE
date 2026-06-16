@@ -77,16 +77,11 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
           </nav>
 
           <div className="mt-auto">
-            <Button
-              variant="primary"
-              className="w-full"
-              onClick={() => {
-                onClose()
-                window.location.href = '/contact'
-              }}
-            >
-              Réserver un appel
-            </Button>
+            <Link href="/contact" onClick={onClose}>
+              <Button variant="primary" className="w-full">
+                Réserver un appel
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
