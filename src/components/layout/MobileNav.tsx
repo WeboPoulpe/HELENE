@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@/components/ui/Button'
+import { BOOKING_URL } from '@/lib/constants'
 
 const navLinks = [
   { href: '/', label: 'Accueil', number: '01' },
@@ -99,13 +100,22 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
             <div className="relative flex h-full flex-col px-8 py-7">
               {/* Header */}
               <div className="flex items-center justify-between">
-                <div>
-                  <span className="font-display text-base font-bold tracking-tight text-white">
-                    Hélène Fouré
-                  </span>
-                  <p className="mt-0.5 text-[10px] uppercase tracking-widest text-rose/80">
-                    Consultante en gestion
-                  </p>
+                <div className="flex items-center gap-3">
+                  <img
+                    src="/logo.svg"
+                    alt="Hélène Fouré"
+                    width={36}
+                    height={36}
+                    className="h-9 w-9 object-contain"
+                  />
+                  <div>
+                    <span className="font-display text-base font-bold tracking-tight text-white">
+                      Hélène Fouré
+                    </span>
+                    <p className="mt-0.5 text-[10px] uppercase tracking-widest text-rose/80">
+                      Consultante en gestion
+                    </p>
+                  </div>
                 </div>
                 <motion.button
                   onClick={onClose}
@@ -163,11 +173,11 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                 <p className="mb-5 font-serif text-sm italic text-white/35">
                   &ldquo;Je structure, tu respires.&rdquo;
                 </p>
-                <Link href="/contact" onClick={onClose}>
+                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={onClose}>
                   <Button variant="primary" className="w-full">
                     Réserver un appel
                   </Button>
-                </Link>
+                </a>
               </motion.div>
             </div>
           </motion.div>

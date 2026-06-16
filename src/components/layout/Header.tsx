@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
 import { MobileNav } from './MobileNav'
+import { BOOKING_URL } from '@/lib/constants'
 
 const navLinks = [
   { href: '/', label: 'Accueil' },
@@ -22,14 +23,23 @@ export function Header() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
           <Link
             href="/"
-            className="flex flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose focus-visible:ring-offset-2"
+            className="flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose focus-visible:ring-offset-2"
           >
-            <span className="font-display text-xl font-bold text-white">
-              Hélène Fouré
-            </span>
-            <span className="text-[10px] uppercase tracking-widest text-white/40">
-              Consultante en gestion
-            </span>
+            <img
+              src="/logo.svg"
+              alt="Hélène Fouré"
+              width={40}
+              height={40}
+              className="h-10 w-10 object-contain"
+            />
+            <div className="flex flex-col">
+              <span className="font-display text-xl font-bold text-white leading-tight">
+                Hélène Fouré
+              </span>
+              <span className="text-[10px] uppercase tracking-widest text-white/40">
+                Consultante en gestion
+              </span>
+            </div>
           </Link>
 
           <nav
@@ -48,9 +58,9 @@ export function Header() {
           </nav>
 
           <div className="hidden lg:block">
-            <Link href="/contact">
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
               <Button variant="primary">Réserver un appel</Button>
-            </Link>
+            </a>
           </div>
 
           <button

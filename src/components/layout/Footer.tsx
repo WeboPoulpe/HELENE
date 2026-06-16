@@ -17,11 +17,20 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-3 lg:gap-8">
           <div className="flex flex-col gap-4 lg:border-r lg:border-white/10 lg:pr-8">
-            <div>
-              <p className="font-display text-xl font-bold text-white">Hélène Fouré</p>
-              <p className="mt-1 text-[10px] uppercase tracking-widest text-white/40">
-                Consultante en gestion d&apos;entreprise
-              </p>
+            <div className="flex items-center gap-3">
+              <img
+                src="/logo.svg"
+                alt="Hélène Fouré"
+                width={44}
+                height={44}
+                className="h-11 w-11 object-contain"
+              />
+              <div>
+                <p className="font-display text-xl font-bold text-white leading-tight">Hélène Fouré</p>
+                <p className="mt-0.5 text-[10px] uppercase tracking-widest text-white/40">
+                  Consultante en gestion d&apos;entreprise
+                </p>
+              </div>
             </div>
             <p className="font-serif italic text-white/60 text-sm leading-relaxed">
               &ldquo;Je structure, tu respires.&rdquo;

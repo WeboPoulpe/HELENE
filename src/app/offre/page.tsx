@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { BOOKING_URL } from '@/lib/constants'
 import { ServicesList } from '@/components/sections/ServicesList'
 import { HowIWorkSection } from '@/components/sections/HowIWorkSection'
 import { PricingSection } from '@/components/sections/PricingSection'
@@ -32,9 +33,9 @@ export default function OffrePage() {
                 sérénité.
               </p>
               <div className="mt-8">
-                <Link href="/contact">
+                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                   <Button variant="primary">Planifiez un appel découverte</Button>
-                </Link>
+                </a>
               </div>
             </div>
             {/* Right: placeholder */}
@@ -62,9 +63,9 @@ export default function OffrePage() {
             concrètement.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
               <Button variant="primary">Réservez votre appel</Button>
-            </Link>
+            </a>
             <Link href="/qui-suis-je">
               <Button variant="ghost">En savoir plus sur moi</Button>
             </Link>

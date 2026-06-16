@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
+import { BOOKING_URL } from '@/lib/constants'
 
 export function HeroSection() {
   return (
@@ -91,9 +92,9 @@ export function HeroSection() {
               transition={{ duration: 0.5, ease: 'easeOut', delay: 0.55 }}
               className="flex flex-col gap-3 sm:flex-row mt-2"
             >
-              <Link href="/contact">
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                 <Button variant="primary">Me rencontrer</Button>
-              </Link>
+              </a>
               <Link href="/offre">
                 <Button variant="ghost">Voir mes services</Button>
               </Link>

@@ -1,8 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
+import { BOOKING_URL } from '@/lib/constants'
 
 export function CtaSection() {
   return (
@@ -33,9 +33,9 @@ export function CtaSection() {
             Sans engagement.
           </p>
           <div className="mt-8">
-            <Link href="/contact">
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
               <Button variant="primary">Réservez votre appel découverte</Button>
-            </Link>
+            </a>
           </div>
         </motion.div>
       </div>
