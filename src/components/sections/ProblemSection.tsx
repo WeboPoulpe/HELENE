@@ -18,10 +18,16 @@ export function ProblemSection() {
               Le constat
             </span>
 
-            <h2 className="mt-4 font-display font-extrabold text-navy text-4xl lg:text-5xl leading-tight">
+            <motion.h2
+              initial={{ opacity: 0, filter: 'blur(8px)', y: 12 }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+              className="mt-4 font-display font-extrabold text-navy text-4xl lg:text-5xl leading-tight"
+            >
               Dirigeant indépendant, TPE : vous n&apos;avez plus le temps de
               tout gérer.
-            </h2>
+            </motion.h2>
 
             <div className="mt-8 space-y-4 text-base leading-relaxed text-slate lg:text-lg">
               <p>

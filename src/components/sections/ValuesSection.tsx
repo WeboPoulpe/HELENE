@@ -13,6 +13,11 @@ const cellVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } },
 }
 
+const headingVariants = {
+  hidden: { opacity: 0, filter: 'blur(8px)', y: 12 },
+  visible: { opacity: 1, filter: 'blur(0px)', y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } },
+}
+
 export function ValuesSection() {
   return (
     <section className="bg-white py-20 lg:py-32">
@@ -27,9 +32,15 @@ export function ValuesSection() {
           <span className="text-xs uppercase tracking-widest font-medium text-rose">
             Mes valeurs
           </span>
-          <h2 className="mt-4 font-display font-extrabold text-navy text-4xl lg:text-5xl leading-tight">
+          <motion.h2
+            variants={headingVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            className="mt-4 font-display font-extrabold text-navy text-4xl lg:text-5xl leading-tight"
+          >
             Ce que je défends. Ce que je cultive.
-          </h2>
+          </motion.h2>
         </motion.div>
 
         <motion.div

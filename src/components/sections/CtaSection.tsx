@@ -24,9 +24,15 @@ export function CtaSection() {
           className="mx-auto max-w-2xl text-center"
         >
           <div className="mx-auto mb-8 h-px w-12 bg-rose" aria-hidden="true" />
-          <h2 className="font-display font-extrabold text-white text-3xl lg:text-5xl leading-tight">
+          <motion.h2
+            initial={{ opacity: 0, filter: 'blur(8px)', y: 12 }}
+            whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+            className="font-display font-extrabold text-white text-3xl lg:text-5xl leading-tight"
+          >
             Prêt à professionnaliser votre gestion sans perdre votre liberté ?
-          </h2>
+          </motion.h2>
           <p className="mt-6 text-base text-white/60 lg:text-lg">
             Un premier appel de 30 minutes pour comprendre votre situation,
             vos besoins et voir si on est faits pour travailler ensemble.

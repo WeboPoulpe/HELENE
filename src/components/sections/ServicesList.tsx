@@ -23,9 +23,15 @@ export function ServicesList() {
                 <span className="text-xs font-medium uppercase tracking-widest text-rose">
                   Service 0{i + 1}
                 </span>
-                <h2 className="mt-2 font-display font-extrabold text-2xl text-navy lg:text-3xl">
+                <motion.h2
+                  initial={{ opacity: 0, filter: 'blur(8px)', y: 12 }}
+                  whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+                  className="mt-2 font-display font-extrabold text-2xl text-navy lg:text-3xl"
+                >
                   {service.title}
-                </h2>
+                </motion.h2>
                 <p className="mt-1 text-base text-slate">{service.subtitle}</p>
               </div>
 

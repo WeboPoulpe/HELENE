@@ -18,9 +18,15 @@ export function PricingSection() {
           <span className="text-xs uppercase tracking-widest font-medium text-rose">
             Tarifs
           </span>
-          <h2 className="mt-4 font-display font-extrabold text-navy text-4xl lg:text-5xl leading-tight">
+          <motion.h2
+            initial={{ opacity: 0, filter: 'blur(8px)', y: 12 }}
+            whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-4 font-display font-extrabold text-navy text-4xl lg:text-5xl leading-tight"
+          >
             Tarifs
-          </h2>
+          </motion.h2>
           <p className="mt-6 text-base text-slate lg:text-lg">
             Mes prestations sont proposées{' '}
             <span className="font-medium text-navy">sur devis personnalisé</span>
