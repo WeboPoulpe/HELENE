@@ -11,13 +11,13 @@ export default function PolitiqueConfidentialitePage() {
   return (
     <div className="bg-white pt-32 pb-20 lg:pt-44">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <h1 className="font-serif text-3xl italic text-ink lg:text-4xl">
+        <h1 className="font-display text-3xl text-navy lg:text-4xl">
           Politique de confidentialité
         </h1>
 
-        <div className="mt-10 space-y-8 text-base text-muted leading-relaxed">
+        <div className="mt-10 space-y-8 text-base text-slate leading-relaxed">
           <section>
-            <h2 className="font-serif text-xl italic text-ink mb-3">
+            <h2 className="font-display text-xl text-navy mb-3">
               Responsable du traitement
             </h2>
             <p>
@@ -28,7 +28,7 @@ export default function PolitiqueConfidentialitePage() {
           </section>
 
           <section>
-            <h2 className="font-serif text-xl italic text-ink mb-3">
+            <h2 className="font-display text-xl text-navy mb-3">
               Données collectées
             </h2>
             <p>
@@ -39,7 +39,7 @@ export default function PolitiqueConfidentialitePage() {
           </section>
 
           <section>
-            <h2 className="font-serif text-xl italic text-ink mb-3">
+            <h2 className="font-display text-xl text-navy mb-3">
               Finalités
             </h2>
             <p>
@@ -50,7 +50,7 @@ export default function PolitiqueConfidentialitePage() {
           </section>
 
           <section>
-            <h2 className="font-serif text-xl italic text-ink mb-3">
+            <h2 className="font-display text-xl text-navy mb-3">
               Durée de conservation
             </h2>
             <p>
@@ -61,7 +61,7 @@ export default function PolitiqueConfidentialitePage() {
           </section>
 
           <section>
-            <h2 className="font-serif text-xl italic text-ink mb-3">
+            <h2 className="font-display text-xl text-navy mb-3">
               Vos droits
             </h2>
             <p>
@@ -70,7 +70,7 @@ export default function PolitiqueConfidentialitePage() {
               portabilité. Pour exercer ces droits, contactez :{' '}
               <a
                 href="mailto:contact@helene-foure.fr"
-                className="text-terracotta hover:underline"
+                className="text-rose hover:underline"
               >
                 contact@helene-foure.fr
               </a>
@@ -81,7 +81,7 @@ export default function PolitiqueConfidentialitePage() {
                 href="https://www.cnil.fr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-terracotta hover:underline"
+                className="text-rose hover:underline"
               >
                 CNIL
               </a>

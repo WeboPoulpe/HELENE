@@ -16,13 +16,13 @@ export const metadata: Metadata = {
 export default function OffrePage() {
   return (
     <>
-      <section className="bg-cream pt-32 pb-16 lg:pt-44 lg:pb-20">
+      <section className="bg-off-white pt-32 pb-16 lg:pt-44 lg:pb-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <Badge className="mb-6">Services</Badge>
-          <h1 className="font-serif text-4xl italic leading-tight text-ink lg:text-5xl max-w-3xl">
+          <h1 className="font-display text-4xl leading-tight text-navy lg:text-5xl max-w-3xl">
             Ce que je fais pour vous (et surtout ce que ça change pour vous)
           </h1>
-          <p className="mt-6 max-w-2xl text-base text-muted lg:text-lg">
+          <p className="mt-6 max-w-2xl text-base text-slate lg:text-lg">
             Chaque service est conçu pour vous libérer du temps, vous donner
             de la visibilité et vous permettre de piloter votre activité avec
             sérénité.
@@ -39,12 +39,12 @@ export default function OffrePage() {
       <HowIWorkSection />
       <PricingSection />
 
-      <section className="bg-cream py-20 lg:py-32">
+      <section className="bg-off-white py-20 lg:py-32">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl italic text-ink lg:text-4xl">
+          <h2 className="font-display text-3xl text-navy lg:text-4xl">
             Prêt à déléguer votre gestion ?
           </h2>
-          <p className="mt-4 text-base text-muted max-w-xl mx-auto">
+          <p className="mt-4 text-base text-slate max-w-xl mx-auto">
             Prenons 30 minutes ensemble pour voir comment je peux vous aider
             concrètement.
           </p>

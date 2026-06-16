@@ -6,39 +6,42 @@ import { Button } from '@/components/ui/Button'
 
 export function PricingSection() {
   return (
-    <section className="bg-stone py-20 lg:py-32">
+    <section className="bg-off-white py-20 lg:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="mx-auto max-w-2xl text-center"
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+          className="mx-auto max-w-2xl"
         >
-          <h2 className="font-serif text-3xl italic text-ink lg:text-4xl">
+          <span className="text-xs uppercase tracking-widest font-medium text-rose">
+            Tarifs
+          </span>
+          <h2 className="mt-4 font-display font-extrabold text-navy text-4xl lg:text-5xl leading-tight">
             Tarifs
           </h2>
-          <p className="mt-6 text-base text-muted lg:text-lg">
+          <p className="mt-6 text-base text-slate lg:text-lg">
             Mes prestations sont proposées{' '}
-            <span className="font-medium text-ink">sur devis personnalisé</span>
+            <span className="font-medium text-navy">sur devis personnalisé</span>
             , après un premier échange pour comprendre vos besoins.
           </p>
-          <p className="mt-4 text-base text-muted">
+          <p className="mt-4 text-base text-slate">
             Pas de surprise, pas de mauvaise surprise. On discute, on construit
             ensemble un accompagnement qui vous correspond.
           </p>
-          <div className="mt-6 rounded-2xl border border-terracotta/30 bg-white p-6">
-            <p className="font-serif text-lg italic text-ink">
+          <div className="mt-8 border border-navy/10 bg-white p-6 lg:p-8">
+            <p className="font-display font-bold text-lg text-navy">
               Service express disponible
             </p>
-            <p className="mt-2 text-sm text-muted">
-              Besoin d&apos;une intervention ponctuelle ? Devis, facture, mise en
-              ordre urgente ? Je propose des interventions à la demande.
+            <p className="mt-2 text-sm text-slate">
+              Besoin d&apos;une intervention ponctuelle ? Devis, facture, mise
+              en ordre urgente ? Je propose des interventions à la demande.
             </p>
           </div>
           <div className="mt-8">
             <Link href="/contact">
-              <Button variant="primary">Demander un devis</Button>
+              <Button variant="outline">Demander un devis</Button>
             </Link>
           </div>
         </motion.div>

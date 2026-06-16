@@ -21,13 +21,13 @@ function formatDate(dateStr: string): string {
 export default function ArticlesPage() {
   return (
     <>
-      <section className="bg-cream pt-32 pb-16 lg:pt-44 lg:pb-20">
+      <section className="bg-off-white pt-32 pb-16 lg:pt-44 lg:pb-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <Badge className="mb-6">Blog</Badge>
-          <h1 className="font-serif text-4xl italic leading-tight text-ink lg:text-5xl max-w-3xl">
+          <h1 className="font-display text-4xl leading-tight text-navy lg:text-5xl max-w-3xl">
             Le coin des bons conseils
           </h1>
-          <p className="mt-6 max-w-2xl text-base text-muted lg:text-lg">
+          <p className="mt-6 max-w-2xl text-base text-slate lg:text-lg">
             Administratif, gestion et organisation… sans jargon compliqué.
             Des conseils pratiques pour les entrepreneurs qui avancent.
           </p>
@@ -40,20 +40,20 @@ export default function ArticlesPage() {
             {articles.map((article) => (
               <article
                 key={article.slug}
-                className="group rounded-2xl border border-stone bg-white p-6 shadow-sm transition-shadow hover:shadow-md lg:p-8"
+                className="group rounded-2xl border border-rose-pale bg-white p-6 shadow-sm transition-shadow hover:shadow-md lg:p-8"
               >
-                <p className="text-xs text-muted">
+                <p className="text-xs text-slate">
                   {formatDate(article.date)}
                 </p>
-                <h2 className="mt-2 font-serif text-xl italic text-ink leading-snug group-hover:text-terracotta transition-colors">
+                <h2 className="mt-2 font-display text-xl text-navy leading-snug group-hover:text-rose transition-colors">
                   {article.title}
                 </h2>
-                <p className="mt-3 text-sm text-muted leading-relaxed line-clamp-3">
+                <p className="mt-3 text-sm text-slate leading-relaxed line-clamp-3">
                   {article.excerpt}
                 </p>
                 <Link
                   href={`/articles/${article.slug}`}
-                  className="mt-4 inline-block text-sm font-medium text-terracotta hover:text-terracotta/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2 rounded-sm"
+                  className="mt-4 inline-block text-sm font-medium text-rose hover:text-rose/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose focus-visible:ring-offset-2 rounded-sm"
                 >
                   Lire →
                 </Link>

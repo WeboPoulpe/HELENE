@@ -41,17 +41,17 @@ export default async function ArticlePage({ params }: Props) {
 
   return (
     <article className="bg-white">
-      <header className="bg-cream pt-32 pb-12 lg:pt-44 lg:pb-16">
+      <header className="bg-off-white pt-32 pb-12 lg:pt-44 lg:pb-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <nav aria-label="Fil d'Ariane" className="mb-6 text-sm text-muted">
-            <Link href="/" className="hover:text-terracotta transition-colors">Accueil</Link>
+          <nav aria-label="Fil d'Ariane" className="mb-6 text-sm text-slate">
+            <Link href="/" className="hover:text-rose transition-colors">Accueil</Link>
             <span className="mx-2">·</span>
-            <Link href="/articles" className="hover:text-terracotta transition-colors">Articles</Link>
+            <Link href="/articles" className="hover:text-rose transition-colors">Articles</Link>
             <span className="mx-2">·</span>
-            <span className="text-ink">{article.title}</span>
+            <span className="text-navy">{article.title}</span>
           </nav>
-          <p className="text-sm text-muted mb-3">{formatDate(article.date)}</p>
-          <h1 className="font-serif text-3xl italic leading-tight text-ink lg:text-4xl">
+          <p className="text-sm text-slate mb-3">{formatDate(article.date)}</p>
+          <h1 className="font-display text-3xl leading-tight text-navy lg:text-4xl">
             {article.title}
           </h1>
         </div>
@@ -59,15 +59,15 @@ export default async function ArticlePage({ params }: Props) {
 
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div
-          className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:italic prose-a:text-terracotta prose-strong:text-ink"
+          className="prose prose-lg max-w-none prose-headings:font-display prose-a:text-rose prose-strong:text-navy"
           dangerouslySetInnerHTML={{ __html: htmlContent }}
         />
 
-        <div className="mt-16 rounded-2xl bg-stone p-8 text-center">
-          <p className="font-serif text-xl italic text-ink">
+        <div className="mt-16 bg-rose-pale p-8 text-center">
+          <p className="font-display text-xl text-navy">
             Besoin d&apos;aide pour votre gestion ?
           </p>
-          <p className="mt-2 text-sm text-muted">
+          <p className="mt-2 text-sm text-slate">
             Contactez-moi pour un premier échange sans engagement.
           </p>
           <div className="mt-6">
@@ -80,7 +80,7 @@ export default async function ArticlePage({ params }: Props) {
         <div className="mt-8 text-center">
           <Link
             href="/articles"
-            className="text-sm text-muted hover:text-terracotta transition-colors"
+            className="text-sm text-slate hover:text-rose transition-colors"
           >
             ← Retour aux articles
           </Link>

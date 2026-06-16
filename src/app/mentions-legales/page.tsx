@@ -10,17 +10,17 @@ export default function MentionsLegalesPage() {
   return (
     <div className="bg-white pt-32 pb-20 lg:pt-44">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <h1 className="font-serif text-3xl italic text-ink lg:text-4xl">
+        <h1 className="font-display text-3xl text-navy lg:text-4xl">
           Mentions légales
         </h1>
 
-        <div className="mt-10 space-y-8 text-base text-muted leading-relaxed">
+        <div className="mt-10 space-y-8 text-base text-slate leading-relaxed">
           <section>
-            <h2 className="font-serif text-xl italic text-ink mb-3">
+            <h2 className="font-display text-xl text-navy mb-3">
               Éditeur du site
             </h2>
             <p>
-              <strong className="text-ink">Hélène Fouré</strong>
+              <strong className="text-navy">Hélène Fouré</strong>
               <br />
               Consultante en gestion d&apos;entreprise
               <br />
@@ -29,14 +29,14 @@ export default function MentionsLegalesPage() {
           </section>
 
           <section>
-            <h2 className="font-serif text-xl italic text-ink mb-3">
+            <h2 className="font-display text-xl text-navy mb-3">
               Directeur de la publication
             </h2>
             <p>Hélène Fouré</p>
           </section>
 
           <section>
-            <h2 className="font-serif text-xl italic text-ink mb-3">
+            <h2 className="font-display text-xl text-navy mb-3">
               Hébergeur
             </h2>
             <p>
@@ -50,7 +50,7 @@ export default function MentionsLegalesPage() {
                 href="https://vercel.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-terracotta hover:underline"
+                className="text-rose hover:underline"
               >
                 vercel.com
               </a>
@@ -58,7 +58,7 @@ export default function MentionsLegalesPage() {
           </section>
 
           <section>
-            <h2 className="font-serif text-xl italic text-ink mb-3">
+            <h2 className="font-display text-xl text-navy mb-3">
               Propriété intellectuelle
             </h2>
             <p>
@@ -69,7 +69,7 @@ export default function MentionsLegalesPage() {
           </section>
 
           <section>
-            <h2 className="font-serif text-xl italic text-ink mb-3">
+            <h2 className="font-display text-xl text-navy mb-3">
               Données personnelles
             </h2>
             <p>

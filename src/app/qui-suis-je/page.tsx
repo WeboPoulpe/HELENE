@@ -21,10 +21,10 @@ export default function QuiSuisJePage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
-              <h2 className="font-serif text-3xl italic text-ink lg:text-4xl">
+              <h2 className="font-display text-3xl text-navy lg:text-4xl">
                 Mon parcours
               </h2>
-              <div className="mt-6 space-y-4 text-base text-muted lg:text-lg">
+              <div className="mt-6 space-y-4 text-base text-slate lg:text-lg">
                 <p>
                   Après 10 ans passés au sein de directions administratives et
                   financières d&apos;entreprises, j&apos;ai décidé de mettre
@@ -41,22 +41,22 @@ export default function QuiSuisJePage() {
             </div>
             <div className="space-y-6">
               <div className="flex gap-4 items-start">
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-terracotta text-white text-sm font-bold font-serif">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-rose text-white text-sm font-bold font-display">
                   1
                 </div>
                 <div>
-                  <p className="font-serif italic text-ink text-lg">10 ans en entreprise</p>
-                  <p className="text-sm text-muted mt-1">Directions administratives et financières, gestion d&apos;équipes et de projets complexes.</p>
+                  <p className="font-display text-navy text-lg">10 ans en entreprise</p>
+                  <p className="text-sm text-slate mt-1">Directions administratives et financières, gestion d&apos;équipes et de projets complexes.</p>
                 </div>
               </div>
-              <div className="h-8 w-px bg-terracotta/30 ml-5" />
+              <div className="h-8 w-px bg-rose/30 ml-5" />
               <div className="flex gap-4 items-start">
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-terracotta text-white text-sm font-bold font-serif">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-rose text-white text-sm font-bold font-display">
                   2
                 </div>
                 <div>
-                  <p className="font-serif italic text-ink text-lg">Consultante indépendante</p>
-                  <p className="text-sm text-muted mt-1">Accompagnement sur-mesure des indépendants, TPE et professions libérales à Troyes et à distance.</p>
+                  <p className="font-display text-navy text-lg">Consultante indépendante</p>
+                  <p className="text-sm text-slate mt-1">Accompagnement sur-mesure des indépendants, TPE et professions libérales à Troyes et à distance.</p>
                 </div>
               </div>
             </div>
@@ -67,12 +67,12 @@ export default function QuiSuisJePage() {
       <ValuesSection />
       <DiffSection />
 
-      <section className="bg-cream py-20 lg:py-32">
+      <section className="bg-off-white py-20 lg:py-32">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl italic text-ink lg:text-4xl">
+          <h2 className="font-display text-3xl text-navy lg:text-4xl">
             Prêt à travailler ensemble ?
           </h2>
-          <p className="mt-4 text-base text-muted max-w-xl mx-auto">
+          <p className="mt-4 text-base text-slate max-w-xl mx-auto">
             Un premier appel pour se rencontrer, comprendre votre situation
             et voir ce qu&apos;on peut construire ensemble.
           </p>

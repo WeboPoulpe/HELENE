@@ -22,41 +22,42 @@ const points = [
 
 export function HowIWorkSection() {
   return (
-    <section className="bg-cream py-20 lg:py-32">
+    <section className="bg-white py-20 lg:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="mb-10"
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+          className="mb-12"
         >
-          <h2 className="font-serif text-3xl italic text-ink lg:text-4xl">
+          <span className="text-xs uppercase tracking-widest font-medium text-rose">
+            Mon approche
+          </span>
+          <h2 className="mt-4 font-display font-extrabold text-navy text-4xl lg:text-5xl leading-tight">
             Comment je travaille
           </h2>
         </motion.div>
 
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-0 divide-y lg:grid-cols-3 lg:divide-y-0 lg:divide-x divide-navy/10">
           {points.map((point, i) => (
             <motion.div
               key={point.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: i * 0.1 }}
-              className="flex gap-4"
+              className="py-8 lg:py-0 lg:px-10 first:lg:pl-0 last:lg:pr-0"
             >
-              <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-terracotta text-white text-sm font-bold">
-                ✔
+              <span className="block font-display font-extrabold text-5xl leading-none text-rose-pale">
+                0{i + 1}
               </span>
-              <div>
-                <h3 className="font-serif text-lg italic text-ink">
-                  {point.label}
-                </h3>
-                <p className="mt-1 text-sm text-muted leading-relaxed">
-                  {point.description}
-                </p>
-              </div>
+              <h3 className="mt-4 font-display font-bold text-lg text-navy">
+                {point.label}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate">
+                {point.description}
+              </p>
             </motion.div>
           ))}
         </div>
