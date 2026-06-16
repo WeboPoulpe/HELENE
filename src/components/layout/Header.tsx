@@ -28,32 +28,32 @@ export function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'border-b border-stone bg-cream/90 backdrop-blur-sm'
+            ? 'bg-navy/95 backdrop-blur-sm border-b border-white/10'
             : 'bg-transparent'
         }`}
       >
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
           <Link
             href="/"
-            className="group flex flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2 rounded-sm"
+            className="flex flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose focus-visible:ring-offset-2"
           >
-            <span className="font-serif text-xl italic text-ink">
+            <span className="font-display text-xl font-bold text-white">
               Hélène Fouré
             </span>
-            <span className="text-xs font-sans text-muted">
+            <span className="text-[10px] uppercase tracking-widest text-white/40">
               Consultante en gestion
             </span>
           </Link>
 
           <nav
-            className="hidden items-center gap-6 lg:flex"
+            className="hidden items-center gap-8 lg:flex"
             aria-label="Navigation principale"
           >
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative text-sm font-medium text-ink transition-colors hover:text-terracotta after:absolute after:bottom-[-2px] after:left-0 after:h-px after:w-0 after:bg-terracotta after:transition-all hover:after:w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2 rounded-sm"
+                className="text-xs uppercase tracking-widest font-medium text-white/60 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose"
               >
                 {link.label}
               </Link>
@@ -70,19 +70,9 @@ export function Header() {
             onClick={() => setMobileOpen(true)}
             aria-label="Ouvrir le menu"
             aria-expanded={mobileOpen}
-            aria-controls="mobile-nav"
-            className="flex items-center justify-center rounded-lg p-2 text-ink transition-colors hover:bg-stone lg:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta"
+            className="flex items-center justify-center p-2 text-white lg:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose"
           >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <line x1="3" y1="6" x2="21" y2="6" />
               <line x1="3" y1="12" x2="21" y2="12" />
               <line x1="3" y1="18" x2="21" y2="18" />

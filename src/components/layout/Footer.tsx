@@ -13,32 +13,29 @@ export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-ink text-cream">
+    <footer className="bg-navy text-white">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-3 lg:gap-8">
-          <div className="flex flex-col gap-4 lg:border-r lg:border-terracotta/30 lg:pr-8">
+          <div className="flex flex-col gap-4 lg:border-r lg:border-white/10 lg:pr-8">
             <div>
-              <p className="font-serif text-xl italic text-cream">
-                Hélène Fouré
-              </p>
-              <p className="mt-1 text-xs font-sans text-cream/60">
+              <p className="font-display text-xl font-bold text-white">Hélène Fouré</p>
+              <p className="mt-1 text-[10px] uppercase tracking-widest text-white/40">
                 Consultante en gestion d&apos;entreprise
               </p>
             </div>
-            <p className="font-serif italic text-cream/80 text-sm leading-relaxed">
-              &ldquo;Ici, tout est pensé pour que vous respiriez. Avec méthode,
-              finesse et efficacité.&rdquo;
+            <p className="font-serif italic text-white/60 text-sm leading-relaxed">
+              &ldquo;Je structure, tu respires.&rdquo;
             </p>
             <a
               href="mailto:contact@helene-foure.fr"
-              className="text-sm text-terracotta hover:text-terracotta-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded-sm"
+              className="text-sm text-rose hover:text-rose/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose"
             >
               contact@helene-foure.fr
             </a>
           </div>
 
-          <div className="lg:border-r lg:border-terracotta/30 lg:pr-8">
-            <p className="mb-4 text-xs font-sans font-medium uppercase tracking-wider text-cream/50">
+          <div className="lg:border-r lg:border-white/10 lg:pr-8">
+            <p className="mb-4 text-[10px] uppercase tracking-widest text-white/40">
               Navigation
             </p>
             <nav aria-label="Navigation footer">
@@ -47,7 +44,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-cream/70 hover:text-terracotta transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded-sm"
+                      className="text-sm text-white/60 hover:text-rose transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose"
                     >
                       {link.label}
                     </Link>
@@ -58,38 +55,36 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="mb-4 text-xs font-sans font-medium uppercase tracking-wider text-cream/50">
+            <p className="mb-4 text-[10px] uppercase tracking-widest text-white/40">
               Localisation
             </p>
-            <p className="text-sm text-cream/70">Troyes · Grand Est</p>
-            <p className="mt-1 text-sm text-cream/70">
-              Interventions locales et à distance
-            </p>
+            <p className="text-sm text-white/60">Troyes · Grand Est</p>
+            <p className="mt-1 text-sm text-white/60">Interventions locales et à distance</p>
             <a
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-block text-sm text-terracotta hover:text-terracotta-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded-sm"
+              className="mt-4 inline-block text-sm text-rose hover:text-rose/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose"
             >
               Voir sur Google Maps →
             </a>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-2 border-t border-terracotta/20 pt-8 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-xs text-cream/40">
+        <div className="mt-12 flex flex-col gap-2 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-xs text-white/30">
             © {year} Hélène Fouré — Tous droits réservés
           </p>
           <div className="flex gap-4">
             <Link
               href="/mentions-legales"
-              className="text-xs text-cream/40 hover:text-cream/70 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded-sm"
+              className="text-xs text-white/30 hover:text-white/60 transition-colors"
             >
               Mentions légales
             </Link>
             <Link
               href="/politique-confidentialite"
-              className="text-xs text-cream/40 hover:text-cream/70 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded-sm"
+              className="text-xs text-white/30 hover:text-white/60 transition-colors"
             >
               Politique de confidentialité
             </Link>
