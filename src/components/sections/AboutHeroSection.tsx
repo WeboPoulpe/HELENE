@@ -8,8 +8,8 @@ export function AboutHeroSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
           >
             <span className="text-xs uppercase tracking-widest font-medium text-rose">
@@ -34,8 +34,11 @@ export function AboutHeroSection() {
 
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
+            animate={{ opacity: 1, y: [0, -10, 0] }}
+            transition={{
+              opacity: { duration: 0.7, ease: 'easeOut', delay: 0.2 },
+              y: { duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 0.2 }
+            }}
             className="flex justify-center lg:justify-end"
           >
             <div className="relative aspect-square w-full max-w-xs bg-navy-light flex items-center justify-center">

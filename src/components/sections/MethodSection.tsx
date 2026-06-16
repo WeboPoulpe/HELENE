@@ -4,14 +4,24 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { pillars } from '@/content/pillars'
 
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12 } },
+}
+
+const pillarVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } },
+}
+
 export function MethodSection() {
   return (
     <section className="bg-navy py-20 lg:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.2 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
           className="mb-16"
         >
@@ -26,14 +36,17 @@ export function MethodSection() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-white/10">
+        <motion.div
+          className="grid lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-white/10"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
           {pillars.map((pillar, i) => (
             <motion.div
               key={pillar.title}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, ease: 'easeOut', delay: i * 0.1 }}
+              variants={pillarVariants}
               className="py-8 lg:py-0 lg:px-10 first:lg:pl-0 last:lg:pr-0"
             >
               <span className="block font-display font-extrabold text-6xl leading-none text-white/10 select-none">
@@ -47,7 +60,7 @@ export function MethodSection() {
               </p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}

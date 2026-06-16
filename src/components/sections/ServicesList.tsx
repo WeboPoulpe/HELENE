@@ -14,9 +14,9 @@ export function ServicesList() {
         >
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
             >
               <div className="mb-8">

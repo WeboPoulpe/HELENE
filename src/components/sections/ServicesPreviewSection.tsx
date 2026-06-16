@@ -3,6 +3,16 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.09 } },
+}
+
+const rowVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } },
+}
+
 const services = [
   {
     number: '01',
@@ -35,9 +45,9 @@ export function ServicesPreviewSection() {
     <section className="bg-white py-20 lg:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.2 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
           className="mb-16"
         >
@@ -50,15 +60,20 @@ export function ServicesPreviewSection() {
           </h2>
         </motion.div>
 
-        <div className="divide-y divide-navy/10">
-          {services.map((service, i) => (
+        <motion.div
+          className="divide-y divide-navy/10"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          {services.map((service) => (
             <motion.div
               key={service.number}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, ease: 'easeOut', delay: i * 0.07 }}
-              className="group grid items-start gap-4 py-8 lg:grid-cols-[120px_1fr_1fr] lg:gap-8 lg:py-10"
+              variants={rowVariants}
+              className="group grid items-start gap-4 py-8 lg:grid-cols-[120px_1fr_1fr] lg:gap-8 lg:py-10 cursor-default"
+              whileHover={{ x: 6 }}
+              transition={{ duration: 0.2 }}
             >
               <span
                 className="font-display font-extrabold text-6xl leading-none text-rose-pale select-none"
@@ -74,7 +89,7 @@ export function ServicesPreviewSection() {
               </p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}

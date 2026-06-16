@@ -9,9 +9,9 @@ export function ProblemSection() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left: existing text content */}
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.2 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
           >
             <span className="text-xs uppercase tracking-widest font-medium text-rose">
@@ -57,9 +57,9 @@ export function ProblemSection() {
 
           {/* Right: photo placeholder */}
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.2 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6, ease: 'easeOut', delay: 0.15 }}
             className="hidden lg:flex justify-end"
           >

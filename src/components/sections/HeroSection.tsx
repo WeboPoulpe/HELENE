@@ -52,8 +52,8 @@ export function HeroSection() {
       <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             className="flex flex-col gap-8"
           >
@@ -75,8 +75,8 @@ export function HeroSection() {
             </div>
 
             <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: 0.4 }}
               className="text-lg leading-relaxed text-white/60 max-w-lg"
             >
@@ -86,8 +86,8 @@ export function HeroSection() {
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: 0.55 }}
               className="flex flex-col gap-3 sm:flex-row mt-2"
             >
@@ -102,8 +102,11 @@ export function HeroSection() {
 
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }}
+            animate={{ opacity: 1, y: [0, -12, 0] }}
+            transition={{
+              opacity: { duration: 0.7, ease: 'easeOut', delay: 0.3 },
+              y: { duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 0.3 }
+            }}
             className="flex justify-center lg:justify-end"
           >
             <div className="relative aspect-[4/5] w-full max-w-sm bg-navy-light flex items-center justify-center overflow-hidden">

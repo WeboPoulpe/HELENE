@@ -2,6 +2,16 @@
 
 import { motion } from 'framer-motion'
 
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12 } },
+}
+
+const stepVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } },
+}
+
 const points = [
   {
     label: 'Un premier appel gratuit',
@@ -25,9 +35,9 @@ export function HowIWorkSection() {
     <section className="bg-white py-20 lg:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.2 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
           className="mb-12"
         >
@@ -39,14 +49,17 @@ export function HowIWorkSection() {
           </h2>
         </motion.div>
 
-        <div className="grid gap-0 divide-y lg:grid-cols-3 lg:divide-y-0 lg:divide-x divide-navy/10">
+        <motion.div
+          className="grid gap-0 divide-y lg:grid-cols-3 lg:divide-y-0 lg:divide-x divide-navy/10"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
           {points.map((point, i) => (
             <motion.div
               key={point.label}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, ease: 'easeOut', delay: i * 0.1 }}
+              variants={stepVariants}
               className="py-8 lg:py-0 lg:px-10 first:lg:pl-0 last:lg:pr-0"
             >
               <span className="block font-display font-extrabold text-5xl leading-none text-rose-pale">
@@ -60,7 +73,7 @@ export function HowIWorkSection() {
               </p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )
