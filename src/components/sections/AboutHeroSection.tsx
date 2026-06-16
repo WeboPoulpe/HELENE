@@ -4,8 +4,14 @@ import { motion } from 'framer-motion'
 
 export function AboutHeroSection() {
   return (
-    <section className="bg-navy py-20 pt-32 lg:py-32 lg:pt-44">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <section className="bg-navy relative overflow-hidden py-20 pt-32 lg:py-32 lg:pt-44">
+      <motion.div
+        className="pointer-events-none absolute top-1/3 -right-32 w-[500px] h-[500px] rounded-full bg-rose/10 blur-3xl"
+        animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.55, 0.3] }}
+        transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+        aria-hidden="true"
+      />
+      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -15,9 +21,16 @@ export function AboutHeroSection() {
             <span className="text-xs uppercase tracking-widest font-medium text-rose">
               Consultante indépendante
             </span>
-            <h1 className="mt-4 font-display font-extrabold text-4xl text-white leading-tight lg:text-5xl">
-              Qui suis-je ? Hélène, consultante en gestion d&apos;entreprise
-            </h1>
+            <div className="overflow-hidden mt-4">
+              <motion.h1
+                className="font-display font-extrabold text-4xl text-white leading-none md:text-5xl xl:text-6xl"
+                initial={{ y: '100%' }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
+              >
+                Qui suis-je ? Hélène, consultante en gestion d&apos;entreprise
+              </motion.h1>
+            </div>
             <div className="mt-6 space-y-3 text-base text-white/60 lg:text-lg">
               <p>
                 J&apos;accompagne les dirigeants indépendants, TPE et

@@ -42,7 +42,7 @@ export default async function ArticlePage({ params }: Props) {
   return (
     <article className="bg-white">
       <header className="bg-navy relative overflow-hidden pt-32 pb-12 lg:pt-44 lg:pb-16">
-        <div className="pointer-events-none absolute -top-32 right-0 w-96 h-96 rounded-full bg-rose/10 blur-3xl opacity-60" aria-hidden="true" />
+        <div className="pointer-events-none absolute top-1/3 -right-32 w-[500px] h-[500px] rounded-full bg-rose/10 blur-3xl animate-pulse" aria-hidden="true" />
         <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
             {/* Left: existing content */}
@@ -55,7 +55,7 @@ export default async function ArticlePage({ params }: Props) {
                 <span className="text-white">{article.title}</span>
               </nav>
               <p className="text-sm text-white/60 mb-3">{formatDate(article.date)}</p>
-              <h1 className="font-display text-3xl leading-tight text-white lg:text-4xl">
+              <h1 className="font-display font-extrabold text-4xl leading-none text-white md:text-5xl xl:text-6xl">
                 {article.title}
               </h1>
             </div>
