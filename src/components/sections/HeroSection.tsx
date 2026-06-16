@@ -22,34 +22,35 @@ export function HeroSection() {
 
       {/* Floating petals */}
       {[
-        { left: '6%',  top: '55%', delay: 0,   dur: 9,  w: 10, h: 22 },
-        { left: '14%', top: '30%', delay: 2.5, dur: 11, w: 14, h: 30 },
-        { left: '22%', top: '70%', delay: 1,   dur: 8,  w: 8,  h: 18 },
-        { left: '35%', top: '20%', delay: 3.5, dur: 10, w: 12, h: 26 },
-        { left: '48%', top: '60%', delay: 1.5, dur: 9,  w: 10, h: 22 },
-        { left: '57%', top: '15%', delay: 0.8, dur: 12, w: 14, h: 30 },
-        { left: '66%', top: '75%', delay: 3,   dur: 8,  w: 8,  h: 18 },
-        { left: '75%', top: '40%', delay: 2,   dur: 10, w: 12, h: 26 },
-        { left: '85%', top: '65%', delay: 4,   dur: 9,  w: 10, h: 22 },
-        { left: '93%', top: '25%', delay: 1.2, dur: 11, w: 14, h: 30 },
-        { left: '28%', top: '85%', delay: 0.4, dur: 8,  w: 8,  h: 18 },
-        { left: '72%', top: '10%', delay: 2.8, dur: 10, w: 12, h: 26 },
+        { left: '5%',  top: '22%', delay: 0,   dur: 6,  w: 12, h: 28, rot: 20,  dist: 24 },
+        { left: '13%', top: '58%', delay: 0.8, dur: 8,  w: 10, h: 24, rot: 45,  dist: 18 },
+        { left: '20%', top: '12%', delay: 2,   dur: 7,  w: 16, h: 36, rot: 70,  dist: 28 },
+        { left: '28%', top: '74%', delay: 1.2, dur: 9,  w: 10, h: 22, rot: 110, dist: 16 },
+        { left: '38%', top: '38%', delay: 3,   dur: 6,  w: 14, h: 32, rot: 30,  dist: 22 },
+        { left: '47%', top: '18%', delay: 0.5, dur: 8,  w: 12, h: 26, rot: 80,  dist: 20 },
+        { left: '55%', top: '68%', delay: 2.5, dur: 7,  w: 10, h: 24, rot: 55,  dist: 18 },
+        { left: '64%', top: '32%', delay: 1.5, dur: 9,  w: 16, h: 36, rot: 15,  dist: 26 },
+        { left: '72%', top: '52%', delay: 0.3, dur: 6,  w: 10, h: 22, rot: 95,  dist: 18 },
+        { left: '80%', top: '14%', delay: 3.5, dur: 8,  w: 14, h: 30, rot: 40,  dist: 22 },
+        { left: '88%', top: '62%', delay: 1,   dur: 7,  w: 12, h: 28, rot: 120, dist: 20 },
+        { left: '93%', top: '33%', delay: 2.2, dur: 9,  w: 10, h: 24, rot: 65,  dist: 16 },
+        { left: '42%', top: '84%', delay: 0.7, dur: 6,  w: 16, h: 36, rot: 25,  dist: 28 },
+        { left: '76%', top: '80%', delay: 4,   dur: 8,  w: 12, h: 26, rot: 85,  dist: 20 },
       ].map((p, i) => (
         <motion.div
           key={i}
-          className="pointer-events-none absolute rounded-full bg-rose"
-          style={{ left: p.left, top: p.top, width: p.w, height: p.h, rotate: 25 + i * 15 }}
+          className="pointer-events-none absolute rounded-full bg-rose/60"
+          style={{ left: p.left, top: p.top, width: p.w, height: p.h }}
+          initial={{ opacity: 0, rotate: p.rot }}
           animate={{
-            y: [0, -80, -180],
-            rotate: [25 + i * 15, 80 + i * 10, 140 + i * 8],
-            opacity: [0, 0.55, 0],
-            x: [0, i % 2 === 0 ? 20 : -20, i % 2 === 0 ? -10 : 10],
+            opacity: 0.55,
+            y: [0, -p.dist, 0],
+            rotate: [p.rot, p.rot + 22, p.rot - 8, p.rot],
           }}
           transition={{
-            duration: p.dur,
-            repeat: Infinity,
-            delay: p.delay,
-            ease: 'easeInOut',
+            opacity: { duration: 1.2, delay: p.delay },
+            y:       { duration: p.dur, repeat: Infinity, ease: 'easeInOut', delay: p.delay },
+            rotate:  { duration: p.dur * 1.3, repeat: Infinity, ease: 'easeInOut', delay: p.delay },
           }}
           aria-hidden="true"
         />
