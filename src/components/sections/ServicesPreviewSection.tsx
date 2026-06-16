@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { Highlight } from '@/components/ui/Highlight'
 
 const containerVariants = {
   hidden: {},
@@ -66,7 +67,7 @@ export function ServicesPreviewSection() {
             viewport={{ once: true, amount: 0.5 }}
             className="mt-4 font-display font-extrabold text-navy text-4xl lg:text-5xl leading-tight max-w-2xl"
           >
-            Le conseil en gestion d&apos;entreprise à Troyes, un levier pour
+            Le conseil en gestion d&apos;entreprise à Troyes, un <Highlight>levier</Highlight> pour
             votre activité.
           </motion.h2>
         </motion.div>

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { values } from '@/content/values'
+import { Highlight } from '@/components/ui/Highlight'
 
 const containerVariants = {
   hidden: {},
@@ -39,7 +40,7 @@ export function ValuesSection() {
             viewport={{ once: true, amount: 0.5 }}
             className="mt-4 font-display font-extrabold text-navy text-4xl lg:text-5xl leading-tight"
           >
-            Ce que je défends. Ce que je cultive.
+            Ce que je défends. Ce que je <Highlight>cultive</Highlight>.
           </motion.h2>
         </motion.div>
 

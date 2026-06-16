@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/Button'
 import { BOOKING_URL } from '@/lib/constants'
+import { Highlight } from '@/components/ui/Highlight'
 
 export function CtaSection() {
   return (
@@ -31,7 +32,7 @@ export function CtaSection() {
             transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
             className="font-display font-extrabold text-white text-3xl lg:text-5xl leading-tight"
           >
-            Prêt à professionnaliser votre gestion sans perdre votre liberté ?
+            Prêt à professionnaliser votre <Highlight>gestion</Highlight> sans perdre votre liberté ?
           </motion.h2>
           <p className="mt-6 text-base text-white/60 lg:text-lg">
             Un premier appel de 30 minutes pour comprendre votre situation,

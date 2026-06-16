@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
+import { Highlight } from '@/components/ui/Highlight'
 
 export function PricingSection() {
   return (
@@ -25,7 +26,7 @@ export function PricingSection() {
             transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
             className="mt-4 font-display font-extrabold text-navy text-4xl lg:text-5xl leading-tight"
           >
-            Tarifs
+            <Highlight>Tarifs</Highlight>
           </motion.h2>
           <p className="mt-6 text-base text-slate lg:text-lg">
             Mes prestations sont proposées{' '}

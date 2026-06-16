@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { Highlight } from '@/components/ui/Highlight'
 
 export function DiffSection() {
   return (
@@ -23,7 +24,7 @@ export function DiffSection() {
             transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
             className="mt-4 font-display font-extrabold text-white text-4xl lg:text-5xl leading-tight"
           >
-            Ni secrétaire. Ni comptable.
+            Ni <Highlight>secrétaire</Highlight>. Ni comptable.
           </motion.h2>
           <div className="mt-8 space-y-4 text-base text-white/60 lg:text-lg">
             <p>

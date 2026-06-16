@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { Highlight } from '@/components/ui/Highlight'
 
 const containerVariants = {
   hidden: {},
@@ -56,7 +57,7 @@ export function HowIWorkSection() {
             viewport={{ once: true, amount: 0.5 }}
             className="mt-4 font-display font-extrabold text-navy text-4xl lg:text-5xl leading-tight"
           >
-            Comment je travaille
+            Comment je <Highlight>travaille</Highlight>
           </motion.h2>
         </motion.div>
 

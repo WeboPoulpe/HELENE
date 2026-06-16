@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { Highlight } from '@/components/ui/Highlight'
 
 export function ProblemSection() {
   return (
@@ -25,7 +26,7 @@ export function ProblemSection() {
               transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
               className="mt-4 font-display font-extrabold text-navy text-4xl lg:text-5xl leading-tight"
             >
-              Dirigeant indépendant, TPE : vous n&apos;avez plus le temps de
+              Dirigeant indépendant, TPE : vous n&apos;avez plus le <Highlight>temps</Highlight> de
               tout gérer.
             </motion.h2>
 

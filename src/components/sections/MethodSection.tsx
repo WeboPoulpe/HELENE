@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { pillars } from '@/content/pillars'
+import { Highlight } from '@/components/ui/Highlight'
 
 const containerVariants = {
   hidden: {},
@@ -40,7 +41,7 @@ export function MethodSection() {
             viewport={{ once: true, amount: 0.5 }}
             className="mt-4 font-display font-extrabold text-white text-4xl lg:text-5xl leading-tight max-w-2xl"
           >
-            Une consultante, pas une exécutante.
+            Une <Highlight>consultante</Highlight>, pas une exécutante.
           </motion.h2>
           <p className="mt-4 text-lg text-white/60 max-w-xl">
             Une experte de la gestion… qui parle votre langage.
