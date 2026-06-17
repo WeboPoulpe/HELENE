@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export function AboutHeroSection() {
   return (
@@ -54,13 +55,14 @@ export function AboutHeroSection() {
             }}
             className="flex justify-center lg:justify-end"
           >
-            <div className="relative aspect-square w-full max-w-xs bg-navy-light flex items-center justify-center">
-              <span
-                className="font-display text-8xl font-extrabold text-white/10 select-none"
-                aria-label="Initiales HF"
-              >
-                HF
-              </span>
+            <div className="relative aspect-square w-full max-w-xs overflow-hidden">
+              <Image
+                src="/helene-about.jpg"
+                alt="Hélène Fouré, consultante en gestion d'entreprise"
+                fill
+                className="object-cover object-center"
+                priority
+              />
             </div>
           </motion.div>
         </div>

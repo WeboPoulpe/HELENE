@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
 import { BOOKING_URL } from '@/lib/constants'
@@ -116,19 +117,14 @@ export function HeroSection() {
             }}
             className="flex justify-center lg:justify-end"
           >
-            <div className="relative aspect-[4/5] w-full max-w-sm bg-navy-light flex items-center justify-center overflow-hidden">
-              <span
-                className="absolute font-display font-extrabold text-[14rem] text-white/5 select-none leading-none"
-                aria-hidden="true"
-              >
-                HF
-              </span>
-              <span
-                className="relative font-display text-8xl font-extrabold text-white/20 select-none"
-                aria-label="Initiales HF"
-              >
-                HF
-              </span>
+            <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden">
+              <Image
+                src="/helene-portrait.jpg"
+                alt="Hélène Fouré, consultante en gestion d'entreprise à Troyes"
+                fill
+                className="object-cover object-top"
+                priority
+              />
             </div>
           </motion.div>
         </div>

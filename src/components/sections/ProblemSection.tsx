@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Highlight } from '@/components/ui/Highlight'
 
 export function ProblemSection() {
@@ -70,9 +71,13 @@ export function ProblemSection() {
             transition={{ duration: 0.6, ease: 'easeOut', delay: 0.15 }}
             className="hidden lg:flex justify-end"
           >
-            <div className="relative aspect-[3/4] w-full max-w-sm bg-navy/5 border border-navy/10 flex flex-col items-center justify-center gap-3 overflow-hidden">
-              <span className="font-display text-8xl font-extrabold text-navy/8 select-none" aria-hidden="true">HF</span>
-              <span className="text-[10px] uppercase tracking-widest text-navy/30">Photo à venir</span>
+            <div className="relative aspect-[3/4] w-full max-w-sm overflow-hidden">
+              <Image
+                src="/bureau-surcharge.jpg"
+                alt="Bureau en désordre illustrant la surcharge administrative"
+                fill
+                className="object-cover object-center"
+              />
             </div>
           </motion.div>
         </div>
