@@ -3,6 +3,12 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import { Card } from '@/components/ui/Card'
+import { MarqueeBanner } from '@/components/ui/MarqueeBanner'
+
+const outilsKeywords = [
+  'Modèles', 'Checklists', 'Guides pratiques', 'Gain de temps',
+  'Outils concrets', 'Ressources gratuites', 'Entrepreneurs', 'Artisans',
+]
 
 export const metadata: Metadata = {
   title: "Outils De Gestion D'entreprise – Boîte à Outils Pour Entrepreneurs | Hélène Fouré",
@@ -50,6 +56,8 @@ export default function BoiteAOutilsPage() {
           </div>
         </div>
       </section>
+
+      <MarqueeBanner items={outilsKeywords} variant="dark" />
 
       <section className="bg-rose-pale py-16 lg:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

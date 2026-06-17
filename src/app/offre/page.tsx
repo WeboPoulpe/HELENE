@@ -6,6 +6,17 @@ import { HowIWorkSection } from '@/components/sections/HowIWorkSection'
 import { PricingSection } from '@/components/sections/PricingSection'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
+import { MarqueeBanner } from '@/components/ui/MarqueeBanner'
+
+const serviceKeywords = [
+  'Gestion administrative', 'Pré-comptabilité', 'Contrôle de gestion',
+  'Déclarations sociales', 'Pilotage financier', 'Suivi trésorerie',
+  'Tableaux de bord', 'Accompagnement stratégique', 'Facturation',
+]
+const processKeywords = [
+  'Premier appel offert', 'Sans engagement', 'Sur-mesure', 'À distance possible',
+  'Gain de temps', 'Sérénité', 'Clarté financière', 'Troyes · Grand Est',
+]
 
 export const metadata: Metadata = {
   title: "Mon Offre - Organisation Administrative Et Conseil En Gestion | Hélène Fouré",
@@ -52,8 +63,10 @@ export default function OffrePage() {
         </div>
       </section>
 
+      <MarqueeBanner items={serviceKeywords} variant="dark" />
       <ServicesList />
       <HowIWorkSection />
+      <MarqueeBanner items={processKeywords} variant="light" />
       <PricingSection />
 
       <section className="bg-off-white py-20 lg:py-32">
@@ -70,7 +83,7 @@ export default function OffrePage() {
               <Button variant="primary">Réservez votre appel</Button>
             </a>
             <Link href="/qui-suis-je">
-              <Button variant="ghost">En savoir plus sur moi</Button>
+              <Button variant="outline">En savoir plus sur moi</Button>
             </Link>
           </div>
         </div>

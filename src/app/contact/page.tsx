@@ -1,5 +1,11 @@
 import type { Metadata } from 'next'
 import { ContactIframe } from '@/components/sections/ContactIframe'
+import { MarqueeBanner } from '@/components/ui/MarqueeBanner'
+
+const contactKeywords = [
+  'Premier appel offert', 'Sans engagement', 'Réponse rapide', 'À distance possible',
+  'Troyes · Grand Est', 'Écoute', 'Accompagnement', 'Sur-mesure',
+]
 
 export const metadata: Metadata = {
   title: "Contact - Prenons Contact | Hélène Fouré",
@@ -42,6 +48,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <MarqueeBanner items={contactKeywords} variant="light" />
 
       <section className="bg-white py-16 lg:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">

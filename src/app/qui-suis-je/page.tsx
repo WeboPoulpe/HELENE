@@ -4,6 +4,16 @@ import { AboutHeroSection } from '@/components/sections/AboutHeroSection'
 import { ValuesSection } from '@/components/sections/ValuesSection'
 import { DiffSection } from '@/components/sections/DiffSection'
 import { Button } from '@/components/ui/Button'
+import { MarqueeBanner } from '@/components/ui/MarqueeBanner'
+
+const aboutKeywords = [
+  '10 ans d\'expérience', 'Troyes · Grand Est', 'Indépendants', 'TPE',
+  'Professions libérales', 'Accompagnement humain', 'Sur-mesure', 'À distance possible',
+]
+const valuesKeywords = [
+  'Rigueur', 'Bienveillance', 'Clarté', 'Transparence',
+  'Engagement', 'Proximité', 'Réactivité', 'Confiance',
+]
 
 export const metadata: Metadata = {
   title: "Qui Suis-je ? Consultante En Gestion D'entreprise | Hélène Fouré",
@@ -16,6 +26,7 @@ export default function QuiSuisJePage() {
   return (
     <>
       <AboutHeroSection />
+      <MarqueeBanner items={aboutKeywords} variant="dark" />
 
       <section className="bg-white py-20 lg:py-32">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -65,6 +76,7 @@ export default function QuiSuisJePage() {
       </section>
 
       <ValuesSection />
+      <MarqueeBanner items={valuesKeywords} variant="light" />
       <DiffSection />
 
       <section className="bg-off-white py-20 lg:py-32">

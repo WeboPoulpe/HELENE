@@ -2,6 +2,12 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { articles } from '@/content/articles'
 import { Badge } from '@/components/ui/Badge'
+import { MarqueeBanner } from '@/components/ui/MarqueeBanner'
+
+const blogKeywords = [
+  'Conseils pratiques', 'Gestion simplifiée', 'Administratif', 'Organisation',
+  'Comptabilité', 'Entrepreneurs', 'Artisans', 'Professions libérales',
+]
 
 export const metadata: Metadata = {
   title: "Le coin des bons conseils en gestion d'entreprise | Hélène Fouré",
@@ -49,6 +55,8 @@ export default function ArticlesPage() {
           </div>
         </div>
       </section>
+
+      <MarqueeBanner items={blogKeywords} variant="dark" />
 
       <section className="bg-white py-16 lg:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

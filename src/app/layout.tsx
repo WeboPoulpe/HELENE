@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   },
   description:
     "Avec mes services de conseil en gestion d'entreprise, votre administratif et votre gestion enfin optimisés. Retrouvez du temps pour ce qui compte vraiment.",
+  icons: {
+    icon: '/logo.svg',
+    shortcut: '/logo.svg',
+    apple: '/logo.svg',
+  },
   openGraph: {
     locale: 'fr_FR',
     type: 'website',

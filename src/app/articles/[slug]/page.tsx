@@ -4,6 +4,12 @@ import Link from 'next/link'
 import { marked } from 'marked'
 import { articles } from '@/content/articles'
 import { Button } from '@/components/ui/Button'
+import { MarqueeBanner } from '@/components/ui/MarqueeBanner'
+
+const articleKeywords = [
+  'Conseils pratiques', 'Gestion simplifiée', 'Administratif', 'Organisation',
+  'TPE', 'Indépendants', 'Artisans', 'Sans jargon',
+]
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -59,16 +65,21 @@ export default async function ArticlePage({ params }: Props) {
                 {article.title}
               </h1>
             </div>
-            {/* Right: placeholder */}
+            {/* Right: photo */}
             <div className="hidden xl:flex justify-end">
-              <div className="relative aspect-[3/4] w-full max-w-xs bg-navy-light/60 border border-white/10 flex flex-col items-center justify-center gap-3 overflow-hidden">
-                <span className="font-display text-7xl font-extrabold text-white/8 select-none" aria-hidden="true">HF</span>
-                <span className="text-[10px] uppercase tracking-widest text-white/25">Photo à venir</span>
+              <div className="relative aspect-[3/4] w-full max-w-xs overflow-hidden">
+                <img
+                  src="/articles-hero.png"
+                  alt="Laptop et notes de travail"
+                  className="h-full w-full object-cover object-top"
+                />
               </div>
             </div>
           </div>
         </div>
       </header>
+
+      <MarqueeBanner items={articleKeywords} variant="dark" />
 
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div
