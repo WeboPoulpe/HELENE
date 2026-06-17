@@ -7,11 +7,26 @@ import { Highlight } from '@/components/ui/Highlight'
 
 export function CtaSection() {
   return (
-    <section className="bg-navy py-20 lg:py-32 relative overflow-hidden">
-      {/* Subtle rose glow */}
+    <section className="relative overflow-hidden py-20 lg:py-32">
+      {/* Video background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover"
+        aria-hidden="true"
+      >
+        <source src="/video/cta-bg.mp4" type="video/mp4" />
+      </video>
+
+      {/* Dark navy overlay — keeps text readable */}
+      <div className="absolute inset-0 bg-navy/78" aria-hidden="true" />
+
+      {/* Rose glow on top of overlay */}
       <motion.div
-        className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-64 rounded-full bg-rose/15 blur-3xl"
-        animate={{ opacity: [0.3, 0.55, 0.3] }}
+        className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-64 rounded-full bg-rose/20 blur-3xl"
+        animate={{ opacity: [0.3, 0.6, 0.3] }}
         transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
         aria-hidden="true"
       />
@@ -34,7 +49,7 @@ export function CtaSection() {
           >
             Prêt à professionnaliser votre <Highlight>gestion</Highlight> sans perdre votre liberté ?
           </motion.h2>
-          <p className="mt-6 text-base text-white/60 lg:text-lg">
+          <p className="mt-6 text-base text-white/70 lg:text-lg">
             Un premier appel de 30 minutes pour comprendre votre situation,
             vos besoins et voir si on est faits pour travailler ensemble.
             Sans engagement.
