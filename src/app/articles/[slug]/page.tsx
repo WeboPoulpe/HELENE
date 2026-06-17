@@ -71,9 +71,8 @@ export default async function ArticlePage({ params }: Props) {
                 <img
                   src="/articles-hero.png"
                   alt="Laptop et notes de travail"
-                  className="h-full w-full object-cover object-top"
+                  className="h-[115%] w-full object-cover object-top"
                 />
-                <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-navy to-transparent" aria-hidden="true" />
               </div>
             </div>
           </div>
