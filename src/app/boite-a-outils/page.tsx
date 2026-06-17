@@ -49,7 +49,7 @@ export default function BoiteAOutilsPage() {
                 <img
                   src="/boite-outils-hero.png"
                   alt="Outils de gestion : cahier, graphiques et carte de visite"
-                  className="h-full w-full object-cover object-top"
+                  className="h-[115%] w-full object-cover object-top"
                 />
               </div>
             </div>
