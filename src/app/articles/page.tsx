@@ -50,6 +50,7 @@ export default function ArticlesPage() {
                   alt="Laptop, cahier et café sur bureau"
                   className="h-full w-full object-cover object-top"
                 />
+                <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-navy to-transparent" aria-hidden="true" />
               </div>
             </div>
           </div>
