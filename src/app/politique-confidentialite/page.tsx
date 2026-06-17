@@ -21,7 +21,7 @@ export default function PolitiqueConfidentialitePage() {
               Responsable du traitement
             </h2>
             <p>
-              Hélène Fouré — contact@helene-foure.fr
+              Hélène Fouré — helene@helene-foure.fr
               <br />
               Adresse à compléter par Hélène Fouré
             </p>
@@ -69,10 +69,10 @@ export default function PolitiqueConfidentialitePage() {
               accès, rectification, effacement, limitation du traitement,
               portabilité. Pour exercer ces droits, contactez :{' '}
               <a
-                href="mailto:contact@helene-foure.fr"
+                href="mailto:helene@helene-foure.fr"
                 className="text-rose hover:underline"
               >
-                contact@helene-foure.fr
+                helene@helene-foure.fr
               </a>
             </p>
             <p className="mt-3">

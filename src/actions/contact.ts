@@ -17,7 +17,7 @@ export async function submitContact(_data: ContactFormData): Promise<{ success: 
   //   await db!.insert(contactSubmissions).values(data)
   //   await resend.emails.send({
   //     from: 'noreply@helene-foure.fr',
-  //     to: 'contact@helene-foure.fr',
+  //     to: 'helene@helene-foure.fr',
   //     subject: `Nouveau message de ${data.name}`,
   //     text: `De: ${data.name} <${data.email}>\n\n${data.message}`,
   //   })

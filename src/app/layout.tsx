@@ -40,7 +40,7 @@ const jsonLd = {
     addressCountry: 'FR',
   },
   url: 'https://www.helene-foure.fr',
-  email: 'contact@helene-foure.fr',
+  email: 'helene@helene-foure.fr',
 }
 
 export default function RootLayout({

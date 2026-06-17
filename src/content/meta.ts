@@ -1,7 +1,7 @@
 export const siteMeta = {
   baseUrl: 'https://www.helene-foure.fr',
   siteName: 'Hélène Fouré',
-  email: 'contact@helene-foure.fr',
+  email: 'helene@helene-foure.fr',
   locale: 'fr_FR',
 }
 

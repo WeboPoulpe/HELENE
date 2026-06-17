@@ -36,10 +36,10 @@ export function Footer() {
               &ldquo;Je structure, tu respires.&rdquo;
             </p>
             <a
-              href="mailto:contact@helene-foure.fr"
+              href="mailto:helene@helene-foure.fr"
               className="text-sm text-rose hover:text-rose/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose"
             >
-              contact@helene-foure.fr
+              helene@helene-foure.fr
             </a>
           </div>
 

@@ -63,10 +63,10 @@ export default function ContactPage() {
             <div>
               <p className="text-xs font-medium uppercase tracking-wider text-slate mb-2">Email</p>
               <a
-                href="mailto:contact@helene-foure.fr"
+                href="mailto:helene@helene-foure.fr"
                 className="text-navy font-medium hover:text-rose transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose rounded-sm"
               >
-                contact@helene-foure.fr
+                helene@helene-foure.fr
               </a>
             </div>
             <div>
