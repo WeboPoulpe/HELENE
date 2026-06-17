@@ -25,14 +25,9 @@ export function CtaSection() {
 
       {/* Bottom gradient — hides AI watermark */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-navy to-transparent"
+        className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-navy via-navy/80 to-transparent"
         aria-hidden="true"
       />
-
-      {/* Logo over the watermark area */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-20" aria-hidden="true">
-        <img src="/logo.svg" alt="" width={48} height={48} className="h-12 w-12 object-contain" />
-      </div>
 
       {/* Rose glow on top of overlay */}
       <motion.div
