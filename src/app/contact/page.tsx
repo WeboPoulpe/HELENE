@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ContactIframe } from '@/components/sections/ContactIframe'
+import { HubSpotForm } from '@/components/sections/HubSpotForm'
 import { MarqueeBanner } from '@/components/ui/MarqueeBanner'
 
 const contactKeywords = [
@@ -52,6 +53,15 @@ export default function ContactPage() {
       <MarqueeBanner items={contactKeywords} variant="light" />
 
       <section className="bg-white py-16 lg:py-24">
+        <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+          <p className="mb-8 text-center font-serif text-xl italic text-navy">
+            Écrivez-moi directement
+          </p>
+          <HubSpotForm />
+        </div>
+      </section>
+
+      <section className="bg-off-white py-16 lg:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <ContactIframe />
         </div>
