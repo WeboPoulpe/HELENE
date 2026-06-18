@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { ContactIframe } from '@/components/sections/ContactIframe'
 import { HubSpotForm } from '@/components/sections/HubSpotForm'
 import { MarqueeBanner } from '@/components/ui/MarqueeBanner'
 
@@ -58,12 +57,6 @@ export default function ContactPage() {
             Écrivez-moi directement
           </p>
           <HubSpotForm />
-        </div>
-      </section>
-
-      <section className="bg-off-white py-16 lg:py-24">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <ContactIframe />
         </div>
       </section>
 
